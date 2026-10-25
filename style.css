@@ -1,0 +1,89 @@
+/* Starterling site: the app's direction A palette (mint ground, apricot accent; neutral black in dark mode). */
+:root {
+  --bg: #e8f5ee;
+  --card: #ffffff;
+  --text: #1f3a2e;
+  --body: #3e5a4c;
+  --muted: #4a6658;
+  --line: #d3e6db;
+  --link: #17603c;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #f2f2f2;
+    --body: #d0d0d0;
+    --muted: #a6a6a6;
+    --line: #2e2e2e;
+    --link: #9be6be;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--body);
+  font: 17px/1.6 "Nunito", ui-rounded, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.brand img { border-radius: 10px; }
+
+nav { color: var(--muted); font-size: 15px; }
+
+article {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 28px 24px;
+  margin-bottom: 24px;
+}
+
+.hero {
+  display: block;
+  border-radius: 27px;
+  margin-bottom: 8px;
+}
+
+h1, h2, h3 { color: var(--text); line-height: 1.25; }
+h1 { font-size: 32px; margin: 0 0 4px; }
+h2 { font-size: 21px; margin: 32px 0 8px; padding-top: 20px; border-top: 1px solid var(--line); }
+h3 { font-size: 17px; margin: 20px 0 4px; }
+
+.meta { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+.lead { font-size: 19px; color: var(--text); }
+
+a { color: var(--link); }
+
+ul { padding-left: 22px; }
+li + li { margin-top: 4px; }
+
+footer { text-align: center; color: var(--muted); font-size: 15px; }
